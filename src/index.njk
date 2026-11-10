@@ -1,0 +1,23 @@
+---
+layout: base.njk
+---
+<main class="sheet" id="main" tabindex="-1">
+  <h1 class="display-title">{{ site.title | escape }}</h1>
+  {% if collections.posts.length %}
+  <ul class="archive" aria-label="Posts">
+    {% for post in collections.posts | reverse %}
+    <li>
+      <a class="archive-entry" href="{{ post.url | escape }}">
+        <h2>{{ post.data.title | escape }}</h2>
+        <div class="post-date">
+          {% if post.data.draft %}<span class="draft-label">Draft · </span>{% endif %}
+          <time datetime="{{ post.date | isoDate }}">{{ post.date | displayDate }}</time>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No posts yet.</p>
+  {% endif %}
+</main>

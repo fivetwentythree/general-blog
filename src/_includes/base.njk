@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{{ site.language | escape }}" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title | escape }} · {% endif %}{{ site.title | escape }}</title>
+  <meta name="description" content="{{ (description or site.description) | escape }}">
+  {% if draft %}<meta name="robots" content="noindex">{% endif %}
+  <link rel="stylesheet" href="/assets/blog.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{ content | safe }}
+</body>
+</html>

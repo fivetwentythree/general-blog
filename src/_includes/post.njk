@@ -1,0 +1,36 @@
+---
+layout: base.njk
+---
+{% set older = collections.posts | getPreviousCollectionItem %}
+{% set newer = collections.posts | getNextCollectionItem %}
+{% if newer or older %}
+<nav class="edge-nav" aria-label="Adjacent posts">
+  {% if newer %}
+  <a class="edge-link edge-newer" href="{{ newer.url | escape }}" aria-label="Newer post, {{ newer.data.title | escape }}"><span aria-hidden="true">←</span></a>
+  {% endif %}
+  {% if older %}
+  <a class="edge-link edge-older" href="{{ older.url | escape }}" aria-label="Older post, {{ older.data.title | escape }}"><span aria-hidden="true">→</span></a>
+  {% endif %}
+</nav>
+{% endif %}
+<main class="sheet" id="main" tabindex="-1">
+  <article>
+    <header class="post-head">
+      <a class="top-rule" href="/" aria-label="All posts"><span aria-hidden="true">All posts</span></a>
+      <h1 class="display-title">{{ title | escape }}</h1>
+      <div class="post-date"><time datetime="{{ page.date | isoDate }}">{{ page.date | displayDate }}</time></div>
+    </header>
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+  </article>
+  <nav class="end-nav" aria-label="Post navigation">
+    {% if newer %}
+    <a class="newer" href="{{ newer.url | escape }}" aria-label="Newer post, {{ newer.data.title | escape }}"><span aria-hidden="true">← </span>Newer</a>
+    {% endif %}
+    <a class="all-posts" href="/">All posts</a>
+    {% if older %}
+    <a class="older" href="{{ older.url | escape }}" aria-label="Older post, {{ older.data.title | escape }}">Older<span aria-hidden="true"> →</span></a>
+    {% endif %}
+  </nav>
+</main>

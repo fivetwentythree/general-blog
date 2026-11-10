@@ -1,0 +1,21 @@
+{
+  "name": "lochana-blog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "eleventy --serve --output=.preview",
+    "build": "eleventy",
+    "new": "node scripts/new-post.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@fontsource/fira-sans": "^5.3.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-footnote": "^4.0.0"
+  }
+}
