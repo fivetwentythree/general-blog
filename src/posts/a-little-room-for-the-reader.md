@@ -1,7 +1,7 @@
 ---
 title: A little room for the reader
 date: "2026-11-10"
-draft: true
+draft: false
 description: A sample essay on the space a page gives its reader.
 ---
 
