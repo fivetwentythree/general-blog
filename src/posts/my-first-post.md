@@ -1,7 +1,7 @@
 ---
 title: "My first post"
 date: "2026-11-10"
-draft: true
+draft: false
 ---
 
 These are some of my ideas on the future of AI 
