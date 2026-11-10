@@ -1,4 +1,4 @@
-# General Blog
+# Lochana's General Thoughts
 
 A Markdown blog built with Eleventy for GitHub Pages. The article and archive layouts are based on [Matthew Butterick’s Chron](https://matthewbutterick.com/chron/layers-of-lawyers-and-liars.html). The supplied typography manual informed the reading measure, semantic markup, punctuation, and link treatment.
 
