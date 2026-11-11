@@ -1,7 +1,7 @@
 ---
 title: A tool to autmate a small part of the business
 date: "2026-11-07"
-draft: true
+draft: false
 description: a tool
 ---
 
