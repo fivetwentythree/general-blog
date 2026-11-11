@@ -36,6 +36,7 @@
   --link: #766f2b;
   --inset: #fff;
   --rule: #ccc;
+  --note-ink: #444;
   --sans: "Fira Sans", "Avenir Next", system-ui, sans-serif;
   --mono: ui-monospace, "SF Mono", Consolas, monospace;
   --gutter: 4.5rem;
@@ -165,11 +166,13 @@ strong {
 }
 
 .prose :is(a, code),
-.prose > p:first-child {
+.prose > p:first-child,
+.prose > .annotated-passage:first-child > p {
   hyphens: none;
 }
 
-.prose > p:first-child {
+.prose > p:first-child,
+.prose > .annotated-passage:first-child > p {
   padding-block-start: 1em;
   font-size: 1.2em;
   line-height: 1.3;
@@ -302,6 +305,40 @@ h2:target .header-anchor {
 
 .prose .footnotes {
   font-size: 0.875em;
+}
+
+.margin-note {
+  margin-block: 0 1rem;
+  padding-inline-start: 0.75em;
+  border-inline-start: 1px solid var(--rule);
+  color: var(--note-ink);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.prose .margin-note > :last-child {
+  margin-block-end: 0;
+}
+
+@media screen and (min-width: 80rem) {
+  .annotated-passage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 0;
+    align-items: start;
+  }
+
+  .margin-notes {
+    inline-size: 8rem;
+    margin-inline-start: 1.25rem;
+  }
+
+  .prose > .annotated-passage:first-child > .margin-notes {
+    padding-block-start: 1.2rem;
+  }
+
+  .margin-note {
+    font-size: 0.75rem;
+  }
 }
 
 .edge-nav {

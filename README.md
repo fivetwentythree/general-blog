@@ -18,6 +18,19 @@ Each post is one Markdown file. Its opening paragraph automatically gets the lar
 
 The renderer converts straight quotation marks, `--`, `---`, and `...` in prose. Use literal `′` and `″` for measurements and backticks for code. Use curly punctuation directly in the title and description. The filename determines the article URL, so keep it stable after publication.
 
+## Margin notes
+
+Place a blockquote beginning with `[!MARGIN]` directly after the paragraph it annotates. Leave a blank line before the blockquote.
+
+```md
+The main paragraph goes here.
+
+> [!MARGIN]
+> A brief aside with *emphasis* or [a link](https://example.com).
+```
+
+Start each line of the note with `>`. Notes sit in the right margin on wide screens and below the paragraph on smaller screens. Use ordinary `>` for quotations and `[^note]` for footnotes at the end of the post.
+
 ## Publish
 
 1. Set `draft: false` and the publication date in the post’s front matter. Use `YYYY-MM-DD`. A post without an explicit `draft: false` stays out of the published build. A public GitHub repository still exposes its source files, so keep private drafts on your device until they are ready.

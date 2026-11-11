@@ -5,6 +5,7 @@ import anchor from "markdown-it-anchor";
 import footnote from "markdown-it-footnote";
 import site from "./src/_data/site.json" with { type: "json" };
 import { slugify } from "./scripts/slug.mjs";
+import marginNotes from "./scripts/margin-notes.mjs";
 
 const dateFormatter = new Intl.DateTimeFormat(site.language, {
   day: "numeric",
@@ -28,6 +29,7 @@ export default function (eleventyConfig) {
 
   const markdown = markdownIt({ html: true, typographer: true })
     .use(footnote)
+    .use(marginNotes)
     .use(anchor, {
       level: [2, 3, 4, 5, 6],
       tabIndex: false,
