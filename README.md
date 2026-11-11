@@ -18,6 +18,10 @@ Each post is one Markdown file. Its opening paragraph automatically gets the lar
 
 The renderer converts straight quotation marks, `--`, `---`, and `...` in prose. Use literal `′` and `″` for measurements and backticks for code. Use curly punctuation directly in the title and description. The filename determines the article URL, so keep it stable after publication.
 
+## Passage breaks
+
+Put `***` on a line by itself, with a blank line on each side, to place the ornament between two passages.
+
 ## Margin notes
 
 Place a blockquote beginning with `[!MARGIN]` directly after the paragraph it annotates. Leave a blank line before the blockquote.

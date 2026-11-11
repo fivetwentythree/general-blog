@@ -21,6 +21,8 @@ A long line makes a quiet demand. When the eye reaches the end, it has to find t
 
 On a phone there is less room to negotiate. The column can shrink, the type can change size, and the line breaks will move. The order of the ideas, the difference between a quotation and its surroundings, and the small pause before a new section still need to come through.
 
+***
+
 ## Where the draft begins
 
 There are three things I want from the page while I am writing:

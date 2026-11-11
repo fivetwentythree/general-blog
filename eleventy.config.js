@@ -41,6 +41,8 @@ export default function (eleventyConfig) {
   markdown.renderer.rules.footnote_anchor = (...args) =>
     footnoteBackref(...args).replace("<a ", '<a aria-label="Back to footnote reference" ');
 
+  markdown.renderer.rules.hr = () => '<hr class="passage-break">\n';
+
   markdown.renderer.rules.table_open = () =>
     '<div class="table-scroll" role="region" aria-label="Table" tabindex="0"><table>\n';
   markdown.renderer.rules.table_close = () => "</table></div>\n";

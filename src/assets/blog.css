@@ -247,6 +247,23 @@ h2:target .header-anchor {
   border-block-start: 1px solid var(--ink);
 }
 
+.prose .passage-break {
+  inline-size: clamp(48px, 5vw, 64px);
+  aspect-ratio: 1;
+  margin: 1.75rem auto;
+  border: 0;
+  background: url("media/passage-ornament.png") center / contain no-repeat;
+  mix-blend-mode: multiply;
+}
+
+@media print, (forced-colors: active) {
+  .prose .passage-break {
+    aspect-ratio: auto;
+    border-block-start: 1px solid currentColor;
+    background: none;
+  }
+}
+
 .prose figure {
   margin-inline: 0;
 }
