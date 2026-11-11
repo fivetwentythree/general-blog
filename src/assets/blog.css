@@ -248,7 +248,7 @@ h2:target .header-anchor {
 }
 
 .prose .passage-break {
-  inline-size: clamp(48px, 5vw, 64px);
+  inline-size: clamp(32px, 3.2vw, 40px);
   aspect-ratio: 1;
   margin: 1.75rem auto;
   border: 0;
