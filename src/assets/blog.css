@@ -248,7 +248,7 @@ h2:target .header-anchor {
 }
 
 .prose .passage-break {
-  --mark: url("media/passage-mark.png");
+  --mark: url("media/passage-ornament.png");
   --mark-size: clamp(32px, 3.2vw, 40px);
   inline-size: calc(3 * var(--mark-size) + 8px);
   block-size: var(--mark-size);
@@ -258,6 +258,7 @@ h2:target .header-anchor {
   background-position: left center, center, right center;
   background-size: var(--mark-size) auto;
   background-repeat: no-repeat;
+  mix-blend-mode: multiply;
 }
 
 @media print, (forced-colors: active) {
