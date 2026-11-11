@@ -248,17 +248,22 @@ h2:target .header-anchor {
 }
 
 .prose .passage-break {
-  inline-size: clamp(32px, 3.2vw, 40px);
-  aspect-ratio: 1;
+  --mark: url("media/passage-mark.png");
+  --mark-size: clamp(32px, 3.2vw, 40px);
+  inline-size: calc(3 * var(--mark-size) + 8px);
+  block-size: var(--mark-size);
   margin: 1.75rem auto;
   border: 0;
-  background: url("media/passage-ornament.png") center / contain no-repeat;
-  mix-blend-mode: multiply;
+  background-image: var(--mark), var(--mark), var(--mark);
+  background-position: left center, center, right center;
+  background-size: var(--mark-size) auto;
+  background-repeat: no-repeat;
 }
 
 @media print, (forced-colors: active) {
   .prose .passage-break {
-    aspect-ratio: auto;
+    inline-size: var(--mark-size);
+    block-size: 0;
     border-block-start: 1px solid currentColor;
     background: none;
   }
